@@ -1,0 +1,85 @@
+.step-by-step {
+    position: absolute;
+    border-radius: 20px;
+    padding: 25px 25px 15px 25px;
+    background: rgba(30, 30, 30, .9);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .7);
+    z-index: 199;
+    min-width: 200px;
+    min-height: 100px;
+    max-width: 400px;
+    max-height: 340px;
+    transition: all .2s ease;
+    font-family: 'Helvetica', Arial, sans-serif;
+
+    .title-step-by-step,
+    .txt-step-by-step {
+        color: white;
+        text-align: left;
+        width: 100%;        
+        padding-right: 10px;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, .1);        
+        padding: 0;
+    }
+
+    .txt-step-by-step {
+        font-size: 17px;
+    }
+
+    .title-step-by-step {
+        font-size: 21px;
+        margin: 0 0 15px 0;
+    }
+
+    .number-step {
+        font-size: 26px;
+        font-style: italic;
+        color: orangered;
+    }
+
+    .btn-close-step {
+        position: absolute;
+        border: 0;
+        color: orangered;
+        font-size: 16px;
+        cursor: pointer;
+        right: 12px;
+        top: 12px;
+        background: transparent;
+        transition: all .2s ease;
+        
+        &:hover {
+            color: white;
+        }
+    }
+
+    .container-btn-next-step {
+        width: 100%;
+        bottom: 0;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        margin-top: 25px;
+
+        button {
+            border: 0;
+            color: white;
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+            font-size: 12px;
+            transition: all .2s ease;
+            margin-top: 3px;
+
+            &:hover {
+                color: orangered;
+            }
+        }
+
+        .last-step {
+            float: left;
+        }
+
+        .next-step {
+            float: right;
+        }
+    }
+}

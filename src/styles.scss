@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.btn-float-step-by-step {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 500px;
+    border: 3px solid red;
+    background: white;
+    font-size: 32px;
+    color: red;
+    padding: 7px;
+    text-align: center;
+    z-index: 99997;
+    cursor: pointer;
+    width: 40px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 10px;
+    box-shadow: 2px 2px 2px rgb(214, 0, 54, .6);
+    transform: scale(.9);
+    transition: all .2s ease;
+  
+    &:hover {
+      transform: scale(1);
+      color: white;
+      background: red;
+    }
+  }

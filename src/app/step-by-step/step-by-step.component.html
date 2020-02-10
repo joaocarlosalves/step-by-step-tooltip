@@ -1,0 +1,18 @@
+<div *ngIf="opened" class="step-by-step" [ngStyle]="position">
+    <!-- Close tip button container -->
+    <button class="btn-close-step" (click)="closeStep()">X</button>
+    <!-- Title container -->
+    <h6 class="title-step-by-step">
+        <span class="number-step">{{ currentStep }}- </span>
+        {{ title }}
+    </h6>
+    <!-- Text container -->
+    <p class="txt-step-by-step">
+       {{ text }}
+    </p>
+    <!-- Navigation buttons container -->
+    <div class="container-btn-next-step">
+        <button *ngIf="currentStep > 1" class="last-step" (click)="lastStep()">Previous</button>
+        <button class="next-step" (click)="nextStep()">{{ txtBtnNext }}</button>
+    </div>
+</div>
