@@ -1,15 +1,10 @@
 import { EventEmitter } from '@angular/core';
 
 export class EventEmitterService {
+    private static emitters: { [eventName: string]: EventEmitter<any> } = {}
 
-    private static emitters: {
-        [nomeEvento: string]: EventEmitter<any>
-    } = {}
-
-    static get (nomeEvento:string): EventEmitter<any> {
-        if (!this.emitters[nomeEvento])
-            this.emitters[nomeEvento] = new EventEmitter<any>();
-        return this.emitters[nomeEvento];
+    static get (eventName: string): EventEmitter<any> {
+        if (!this.emitters[eventName]) this.emitters[eventName] = new EventEmitter<any>()
+        return this.emitters[eventName]
     }
-
 }
